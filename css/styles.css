@@ -36,7 +36,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 	display: block;
 }
 /*================== Mostly Fluid Pattern for Index =====================*/
-#maincontent {
+#container/*maincontent*/ {
   /*display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row wrap;
@@ -49,6 +49,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 }
 #map-container, .filter-options, #restaurants-list, #breadcrumb, .inside #map-container, #restaurant-container, #reviews-container, #footer {
   width: 100%;
+  height: 250px;
 }
 /*================== End Mostly Fluid Pattern for Index =====================*/
 #maincontent {
@@ -232,7 +233,6 @@ nav h1 a {
 .inside #map {
   background-color: #ccc;
   height: 100%;
-  width: 100%;
 }
 .inside #footer {
   bottom: 0;
