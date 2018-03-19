@@ -11,25 +11,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Restaurant Info</title>
-      
 </head>
 
-  <body>
-    <!-- Beginning container -->
-    <div id="container" role="main">
-      <header>
-        <!-- Beginning nav -->
-        <nav>
-           <a href="/"><img src="/img/logo1.svg" class="logo" alt="Restaurant Reviews logo"></a>
-        </nav>
-        <!-- Beginning breadcrumb -->
-        <ul id="breadcrumb" >
-          <li><a href="/">Home</a></li>
-        </ul>
-        <!-- End breadcrumb -->
-        <!-- End nav -->
-      </header>
-      <!-- End header -->
+<body class="inside">
+  <div id="container">
+    <!-- Beginning header -->
+    <header>
+      <!-- Beginning nav -->
+      <nav>
+         <a href="/"><img src="/img/logo1.svg" class="logo" alt="Restaurant Reviews logo"></a>
+      </nav>
+      <!-- Beginning breadcrumb -->
+      <ul id="breadcrumb" >
+        <li><a href="/">Home</a></li>
+      </ul>
+      <!-- End breadcrumb -->
+      <!-- End nav -->
+    </header>
+    <!-- End header -->
+
+    <!-- Beginning main -->
+    <main id="maincontent">
       <!-- Beginning map -->
       <section id="map-container">
         <div id="map"></div>
@@ -49,14 +51,16 @@
         <ul id="reviews-list"></ul>
       </section>
       <!-- End reviews -->
-    </div>
-    <!-- End container -->
+    </main>
+    <!-- End main -->
+
     <!-- Beginning footer -->
     <footer id="footer">
       Copyright (c) 2018 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
     </footer>
     <!-- End footer -->
-     <!-- Beginning scripts -->
+
+    <!-- Beginning scripts -->
     <!-- Database helpers -->
     <script type="text/javascript" src="js/dbhelper.js"></script>
     <!-- Main javascript file -->
@@ -64,6 +68,7 @@
     <!-- Google Maps -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANM24w06le3kIFvlpGPNzRRmP4uvDwAes&libraries=places&callback=initMap"></script>
     <!-- End scripts -->
-  </body>
+  </div>
+</body>
 
 </html>
