@@ -39,7 +39,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 
 
 /* // [START mfluid] */
-      #container {
+      #container, #containerIndex {
         display: -webkit-flex;
         display: flex;
         -webkit-flex-flow: row wrap;
@@ -95,7 +95,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
     padding-top: 115px;
 }
 /*#map-container, .filter-options, #restaurants-list, #breadcrumb, .inside #map-container, #restaurant-container, #reviews-container, #footer*/
-header, #breadcrumb, #map-container, #filter-options, #restaurants-list, #restaurant-container, #reviews-container{
+header, #breadcrumb, #map-container, #restaurants, #restaurants-list, #restaurant-container, #reviews-container{
   width: 100%;
 }
 /*================== End Mostly Fluid Pattern for Index =====================*/
