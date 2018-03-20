@@ -86,13 +86,16 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 
 
 /*================== Mostly Fluid Pattern for Index =====================*/
-#container {
+#container, #containerIndex {
   width: 100%;
-  padding-top: 115px;
   background-color: #eee;
+    padding-top: 70px;
+}
+#container {
+    padding-top: 115px;
 }
 /*#map-container, .filter-options, #restaurants-list, #breadcrumb, .inside #map-container, #restaurant-container, #reviews-container, #footer*/
-header, #breadcrumb, #map-container, #restaurant-container, #reviews-container{
+header, #breadcrumb, #map-container, #filter-options, #restaurants-list, #restaurant-container, #reviews-container{
   width: 100%;
 }
 /*================== End Mostly Fluid Pattern for Index =====================*/
@@ -174,6 +177,9 @@ nav h1 a {
     text-decoration: underline;
 }
 /* ====================== Map ====================== */
+#containerIndex #map {
+  height: 350px;
+}
 #map {
   height: 250px;
   width: 100%;
@@ -261,6 +267,7 @@ nav h1 a {
 header {
   position: fixed;
   top: 0;
+  z-index: 1000;
 }
 /*CAMBIADO
 .inside header {
@@ -270,9 +277,6 @@ header {
   z-index: 1000;
 }
 /*FIN DE CAMBIADO*/
-#map-container {
-
-}
 /*CAMBIADO
 .inside #map-container {
 
