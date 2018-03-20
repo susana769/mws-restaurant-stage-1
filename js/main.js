@@ -36,7 +36,7 @@ fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
     option.innerHTML = neighborhood;
     option.value = neighborhood;
     console.log(option);
-    select.appendChildChild(option);
+    select.appendChild(option);
   });
 }
 
@@ -65,7 +65,7 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
     option.innerHTML = cuisine;
     option.value = cuisine;
     console.log(select);
-    select.appendChildChild(option);
+    select.appendChild(option);
   });
 }
 
