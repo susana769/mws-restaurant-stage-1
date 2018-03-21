@@ -257,6 +257,7 @@ nav h1 a {
   margin: 5% 0 5%;
   text-transform: uppercase;
   line-height: 1.1;
+  min-height: 58px;
 }
 #restaurants-list p {
   margin: 0;
@@ -403,10 +404,15 @@ header {
 
 /*================== Media Queries ===================*/
 @media (min-width: 600px) {
-  #restaurant-list li {
-    width: calc(50% - 80px);
+  ul#restaurants-list li {
+    width: calc((100% - 24px) / 2);
     display: inline-block;
+    margin-right: 6px;
+    margin-left: 6px
   }
+/*  ul#restaurants-list li:last-of-type {
+    margin-right: 0;
+  }*/
   .c1, .c3, .c4, .c5 {
     width: 50%;
   }
