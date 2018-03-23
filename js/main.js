@@ -4,6 +4,10 @@ let restaurants,
 var map
 var markers = []
 
+self.addEventListener('fetch', function() {
+  console.log(event.request);
+});
+
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
