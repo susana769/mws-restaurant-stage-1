@@ -364,6 +364,12 @@ header {
   }
   #container #map-container {
     order: 2;
+    height: 100%;
+    position: fixed;
+    right: 0;
+   /* position: absolute;
+    top: 0px;
+    left: 0px;*/
   }
   #restaurant-container {
     order: 1;
@@ -372,6 +378,7 @@ header {
     order: 3;
   }
   #map {
-    height: 1500px;
+    height: 100%;
+    overflow: hidden;
   }
 }
