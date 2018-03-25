@@ -4,9 +4,6 @@ let restaurants,
 var map
 var markers = []
 
-self.addEventListener('fetch', function() {
-  console.log(event.request);
-});
 
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
@@ -144,10 +141,26 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
 
+/* Create picture for the principal image of each restaurant*/
+  const picture = document.createElement('picture');
+  const imgSrc = DBHelper.imageUrlForRestaurant(restaurant);
+  const source600 = document.createElement('source');
+  source600.media = "(max-width: 600px)";
+  source600.srcset = imgSrc + "_medium.jpg";
+
+  /*const source750 = document.createElement('source');
+  source750.media = "(min-width: 750px)";
+  source750.srcset = "images/rosella-1600_large_2x.jpg 2x, images/rosella-800_large_1x.jpg";
+  */
+  
   const image = document.createElement('img');
   image.className = 'restaurant-img';
-  image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  li.appendChild(image);
+  image.src = imgSrc + ".jpg";
+  image.setAttribute("alt", restaurant.textAlt);
+ /* picture.appendChild(source750);*/
+  picture.appendChild(source600);
+  picture.appendChild(image);  
+  li.appendChild(picture);
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
