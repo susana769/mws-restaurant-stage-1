@@ -184,6 +184,9 @@ nav {
   text-decoration: none;
   margin-top: 8%;
 }
+.address {
+  min-height: 50px;
+}
 /* ====================== Restaurant Details ====================== */
 header {
   position: fixed;
