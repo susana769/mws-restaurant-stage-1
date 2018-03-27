@@ -21,18 +21,18 @@
     <div id="container-index" role="main">
       <header>
         <!-- Beginning nav -->
-        <nav>
+        <nav role="banner">
           <a href="/"><img src="/images_src/fixed/logo.svg" class="logo" alt="Restaurant Reviews logo"></a>
         </nav>
         <!-- End nav -->
       </header>
       <!-- End header -->
       <!-- Beginning map -->
-      <section id="map-container">
+      <section id="map-container" role="application">
         <div id="map"></div>
       </section>
       <!-- End map -->        
-      <section id="restaurants">
+      <section id="restaurants" role="main">
         <!-- Beginning restaurant filter -->
         <div class="filter-options">
           <h2>Filter Results</h2>
@@ -49,7 +49,7 @@
       </div>
       <!-- End container -->
       <!-- Beginning footer -->
-      <footer id="footer">
+      <footer id="footer" role="contentinfo">
         Copyright (c) 2018 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
       </footer>
       <!-- End footer -->
@@ -58,17 +58,18 @@
     <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANM24w06le3kIFvlpGPNzRRmP4uvDwAes&libraries=places&callback=initMap"></script>
     <script>
-     if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/js/sw.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }).catch(function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
+      /* For Cache */
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/js/sw.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }).catch(function(err) {
+            // registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+          });
+        });
+      }
     </script>
 
   </body>

@@ -19,14 +19,14 @@
 
   <body id="restaurant-page">
     <!-- Beginning container -->
-    <div id="container" role="main">
+    <div id="container">
       <header>
         <!-- Beginning nav -->
-        <nav>
+        <nav role="banner">
            <a href="/"><img src="/images_src/fixed/logo.svg" class="logo" alt="Restaurant Reviews logo"></a>
         </nav>
         <!-- Beginning breadcrumb -->
-        <ul id="breadcrumb" >
+        <ul id="breadcrumb" role="navigation">
           <li><a href="/">Home</a></li>
         </ul>
         <!-- End breadcrumb -->
@@ -34,12 +34,12 @@
       </header>
       <!-- End header -->
       <!-- Beginning map -->
-      <section id="map-container">
+      <section id="map-container" role="application">
         <div id="map"></div>
       </section>
       <!-- End map -->
       <!-- Beginning restaurant -->
-      <section id="restaurant-container">
+      <section id="restaurant-container" role="main">
         <h1 id="restaurant-name"></h1>
         <picture>
           <source id="source-600">
@@ -51,14 +51,14 @@
       </section>
       <!-- end restaurant -->
       <!-- Beginning reviews -->
-      <section id="reviews-container">
+      <section id="reviews-container" role="complementary">
         <ul id="reviews-list"></ul>
       </section>
       <!-- End reviews -->
     </div>
     <!-- End container -->
     <!-- Beginning footer -->
-    <footer id="footer">
+    <footer id="footer" role="contentinfo">
       Copyright (c) 2018 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
     </footer>
     <!-- End footer -->
