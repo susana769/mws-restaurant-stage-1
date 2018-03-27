@@ -172,11 +172,13 @@ createRestaurantHTML = (restaurant) => {
 
   const address = document.createElement('p');
   address.innerHTML = restaurant.address;
+  address.setAttribute("class", "address");
   li.appendChild(address);
 
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
-  more.href = DBHelper.urlForRestaurant(restaurant)
+  more.href = DBHelper.urlForRestaurant(restaurant);
+  more.setAttribute("alt", "View details of " + restaurant.name);
   li.appendChild(more)
 
   return li
