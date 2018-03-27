@@ -58,12 +58,19 @@
     <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANM24w06le3kIFvlpGPNzRRmP4uvDwAes&libraries=places&callback=initMap"></script>
     <script>
-      if('serviceWorker' in navigator) {
-        navigator.serviceWorker
-        .register('/js/sw.js')
-        .then(function() { console.log("Service Worker Registered"); });
-      }
+     if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/js/sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }).catch(function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
     </script>
+
   </body>
   
 </html>
