@@ -28,7 +28,8 @@
       </header>
       <!-- End header -->
       <!-- Beginning map -->
-      <section id="map-container" role="application">
+      <section id="map-container">
+        <h2 class="titleHidden">Map with all locations of the restauranst showing in the page</h2>
         <div id="map"></div>
       </section>
       <!-- End map -->        
@@ -57,21 +58,6 @@
     <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
     <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANM24w06le3kIFvlpGPNzRRmP4uvDwAes&libraries=places&callback=initMap"></script>
-    <script>
-      /* For Cache */
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('/js/sw.js').then(function(registration) {
-          // Registration was successful
-          console.log('ServiceWorker registration successful with scope: ', registration.scope);
-          }).catch(function(err) {
-            // registration failed :(
-            console.log('ServiceWorker registration failed: ', err);
-          });
-        });
-      }
-    </script>
-
   </body>
   
 </html>
