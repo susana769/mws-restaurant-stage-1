@@ -116,6 +116,10 @@ nav {
   width: 100%;
   background-color: #ccc;
 }
+.titleHidden {
+  position: absolute;
+  top: -9999px;
+}
 /* ====================== Restaurant Filtering ====================== */
 #restaurants {
   max-width: 1080px;
