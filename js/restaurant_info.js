@@ -52,6 +52,9 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
   name.innerHTML = restaurant.name;
 
+  /*Create the title hidden for the map*/
+  document.getElementById('mapTitle').innerHTML='Map with location of ' + restaurant.name;  
+
   const address = document.getElementById('restaurant-address');
   address.innerHTML = restaurant.address;
 
