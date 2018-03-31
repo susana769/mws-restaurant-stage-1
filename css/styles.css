@@ -66,16 +66,18 @@ header, #breadcrumb, #map-container, #restaurants, #restaurant-container, #revie
 }
 /* ====================== Navigation ====================== */
 .logo {
-  margin-top: 12px;
   width: 290px;
 }
-nav {
+nav.banner {
   width: 100%;
   height: 70px;
   background-color: #252831;
   text-align:center;
   position: fixed;
   top: 0;
+}
+nav.banner h1 {
+  margin-top: 12px;
 }
 #breadcrumb {
     display: block;
@@ -106,6 +108,9 @@ nav {
 #breadcrumb li a:hover {
     color: #01447e;
     text-decoration: underline;
+}
+#breadcrumb [aria-current="page"] {
+  color: #000;
 }
 /* ====================== Map ====================== */
 #container-index #map {
@@ -167,7 +172,7 @@ nav {
   max-width: 100%;
   border-radius: 20px 0 0 0;
 }
-#restaurants-list li h1 {
+#restaurants-list li h2 {
   min-height: 58px;
 }
 #restaurants-list p {
@@ -205,7 +210,7 @@ header {
   bottom: 0;
   position: absolute;
 }
-#restaurant-name, #restaurants-list li h1 {
+#restaurant-name, #restaurants-list li h2 {
   color: #f18200;
   font-size: 1.7rem;
   font-weight: 200;
@@ -250,7 +255,7 @@ header {
 #reviews-container {
   padding-top: 5%;
 }
-#reviews-container h2 {
+#reviews-container h3 {
   color: #f58500;
   font-size: 1.7rem;
   font-weight: 300;

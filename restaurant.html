@@ -22,13 +22,15 @@
     <div id="container">
       <header>
         <!-- Beginning nav -->
-        <nav role="banner">
-           <a href="/"><img src="/images_src/fixed/logo.svg" class="logo" alt="Restaurant Reviews logo"></a>
+        <nav role="banner" class="banner">
+           <h1><a href="/"><img src="/images_src/fixed/logo.svg" class="logo" alt="Restaurant Reviews logo"></a></h1>
         </nav>
         <!-- Beginning breadcrumb -->
-        <ul id="breadcrumb" role="navigation">
-          <li><a href="/">Home</a></li>
-        </ul>
+        <nav aria-label="Breadcrumb">
+          <ul id="breadcrumb" role="navigation">
+            <li><a href="/">Home</a></li>
+          </ul>
+        </nav>
         <!-- End breadcrumb -->
         <!-- End nav -->
       </header>
@@ -36,12 +38,12 @@
       <!-- Beginning map -->
       <section id="map-container">
            <h2 id="mapTitle" class="titleHidden"></h2>
-        <div id="map"></div>
+        <div id="map" role="application"></div>
       </section>
       <!-- End map -->
       <!-- Beginning restaurant -->
       <section id="restaurant-container" role="main">
-        <h1 id="restaurant-name"></h1>
+        <h2 id="restaurant-name"></h2>
         <picture>
           <source id="source-600">
           <img id="restaurant-img">

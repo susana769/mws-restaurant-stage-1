@@ -21,8 +21,8 @@
     <div id="container-index" role="main">
       <header>
         <!-- Beginning nav -->
-        <nav role="banner">
-          <a href="/"><img src="/images_src/fixed/logo.svg" class="logo" alt="Restaurant Reviews logo"></a>
+        <nav role="banner" class="banner">
+          <h1><a href="/"><img src="/images_src/fixed/logo.svg" class="logo" alt="Restaurant Reviews logo"></a></h1>
         </nav>
         <!-- End nav -->
       </header>
@@ -30,7 +30,7 @@
       <!-- Beginning map -->
       <section id="map-container">
         <h2 class="titleHidden">Map with all locations of the restauranst showing in the page</h2>
-        <div id="map"></div>
+        <div id="map" role="application"></div>
       </section>
       <!-- End map -->        
       <section id="restaurants" role="main">
@@ -58,6 +58,18 @@
     <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
     <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANM24w06le3kIFvlpGPNzRRmP4uvDwAes&libraries=places&callback=initMap"></script>
+    <script>  /* For Cache */
+  if ('serviceWorker' in navigator) {
+  // Register a service worker hosted at the root of the
+  // site using the default scope.
+  navigator.serviceWorker.register('/js/sw.js').then(function(registration) {
+    console.log('Service worker registration succeeded:', registration);
+  }).catch(function(error) {
+    console.log('Service worker registration failed:', error);
+  });
+} else {
+  console.log('Service workers are not supported.');
+}</script>
   </body>
   
 </html>
